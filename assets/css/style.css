@@ -1471,3 +1471,14 @@ body,
     padding: 50px 0 28px;
   }
 }
+
+
+/* Performance helpers */
+.bonus-strip, .content-block, .footer {
+  content-visibility: auto;
+  contain-intrinsic-size: 600px;
+}
+
+@media (max-width: 760px) {
+  .site-header { backdrop-filter: none; }
+}
