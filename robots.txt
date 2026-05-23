@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /play-slimking/
+Disallow: /registeration/
+Sitemap: https://slimking-france.net/sitemap.xml
