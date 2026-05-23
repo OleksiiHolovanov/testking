@@ -1620,3 +1620,102 @@ body,
     font-size: 15px;
   }
 }
+
+/* Final image scaling fixes: remove grey bars and keep media blocks filled */
+img {
+  display: block;
+}
+
+.image-card,
+.app-card,
+.app-preview,
+.page-image-card,
+.rich-media {
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  background: #151515;
+}
+
+.image-card > img,
+.app-card > img,
+.app-preview > img,
+.page-image-card > img,
+.rich-media > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.rich-page .page-image-card,
+.rich-media {
+  min-height: 380px;
+}
+
+/* Square bonus cards on the homepage */
+.bonus-card {
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: 50% 50%;
+}
+
+.bonus-card > img {
+  position: static;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bonus-card-content {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 20px 22px;
+}
+
+.bonus-card-content h2 {
+  margin-bottom: 4px;
+  font-size: clamp(20px, 1.9vw, 25px);
+}
+
+.bonus-card-content p {
+  margin: 0;
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height: 1.45;
+}
+
+.bonus-card-content a {
+  margin-top: 0;
+}
+
+@media (max-width: 1060px) {
+  .bonus-card {
+    aspect-ratio: auto;
+    min-height: 520px;
+    grid-template-rows: 52% auto;
+  }
+
+  .rich-page .page-image-card,
+  .rich-media {
+    min-height: 0;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 760px) {
+  .bonus-card {
+    min-height: 500px;
+  }
+}
