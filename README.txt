@@ -24,3 +24,6 @@ Pages:
 - /play-slimking/ redirects after 3 seconds to the affiliate URL
 
 Domain configured in canonical, Open Graph, sitemap and structured data: slimking-france.net.
+
+
+Update: original SlimKing logo restored. Side pages expanded to at least 7 text blocks each. No additional images were created.
